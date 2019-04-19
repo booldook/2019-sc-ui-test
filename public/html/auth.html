@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Firebase Auth</title>
+	<link rel="stylesheet" href="../css/fa.min.css">
+	<link rel="stylesheet" href="../css/bootstrap.min.css">
+	<link rel="stylesheet" href="../css/animate.css">
+	<link rel="stylesheet" href="../css/base.css">
+	<link rel="stylesheet" href="../css/auth.css">
+	<script src="../js/jquery-3.3.1.min.js"></script>
+	<script src="../js/bootstrap.min.js"></script>
+	<script src="../js/wow.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="jumbotron">
+			<h2>구글 로그인</h2>
+		</div>
+		<div class="google_sign">
+			<div class="google_icon">
+				<img src="" class="img">
+			</div>
+			<div class="google_cont">
+				<div></div>
+				<div></div>
+			</div>
+			<div class="google_bt">
+				<button class="btn btn-primary" id="bt_login_google">
+					<i class="fab fa-google"></i> 구글 로그인
+				</button>
+				<button class="btn btn-danger" id="bt_logout_google">
+					<i class="fas fa-sign-out-alt"></i> 구글 로그아웃
+				</button>
+			</div>
+		</div>
+		<div class="dbs">
+			<div class="card">
+				<div class="card-header">
+					<h5><i class="fas fa-key"></i> 회원가입</h5>
+				</div>
+				<div class="card-body form-group">
+					<input type="text" name="name" id="name" class="form-control" placeholder="이름">
+					<input type="text" name="email" id="email" class="form-control" placeholder="이메일">
+					<input type="password" name="pass" id="pass" class="form-control" placeholder="비밀번호">
+				</div>
+				<div class="card-footer">
+					<button type="button" class="btn btn-primary" id="bt_join">회원가입</button>
+				</div>
+			</div>
+		</div>
+		<div class="gbooks">
+			<div class="card">
+				<div class="card-header">
+					<h5><i class="fas fa-edit"></i> 방명록</h5>
+				</div>
+				<div class="card-body form-group">
+					<input type="text" name="writer" id="writer" class="form-control" placeholder="작성자">
+					<textarea name="content" id="content" class="form-control" placeholder="당신의 한마디를 남겨주세요."></textarea>
+				</div>
+				<div class="card-footer">
+					<button type="button" class="btn btn-primary" id="bt_save">저장</button>
+				</div>
+			</div>
+		</div>
+		<div class="gbook_li">
+			<table id="gbook_tb" class="table table-bordered table-striped table-hover">
+				<thead>
+					<tr>
+						<th>작성자</th>
+						<th>작성일</th>
+						<th>한마디</th>
+						<th>관리</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/5.9.4/firebase.js"></script>
+	<script src="../js/fbinit.js"></script>
+	<script src="../js/auth.js"></script>
+</body>
+
+</html>
